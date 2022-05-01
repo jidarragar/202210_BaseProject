@@ -18,6 +18,12 @@
         </tr>
       </tbody>
     </table>
-    <!-- <div>{{ cars.length }}</div> -->
+    <!-- <div>{{ cars.map(t => t.marca).reduce((a, b) => a + b, 0) }}</div> -->
+
+    <div *ngFor="let brand of summaryCars">
+      Total
+      {{ brand.marca }}:
+      {{ brand.total }}
+    </div>
   </div>
 </div>
