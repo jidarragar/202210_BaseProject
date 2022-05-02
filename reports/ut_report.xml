@@ -1,12 +1,15 @@
 <testExecutions version="1">
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title " duration="64"/>
-    <testCase name="AppComponent should create the app" duration="12"/>
-  </file>
-  <file path="src/app/car/car.service.spec.ts">
-    <testCase name="Service: Car should ..." duration="10"/>
+    <testCase name="AppComponent should create the app" duration="48"/>
+    <testCase name="AppComponent should have as title " duration="10"/>
   </file>
   <file path="src/app/car/car-list/car-list.component.spec.ts">
-    <testCase name="CarListComponent should create" duration="74"/>
+    <testCase name="CarListComponent Se debe tener encabezado" duration="43"/>
+    <testCase name="CarListComponent Se debe tener 3 registros en la tabla" duration="7"/>
+    <testCase name="CarListComponent should create" duration="10"/>
+    <testCase name="CarListComponent Se debe tener 3 Registros en component.cars" duration="7"/>
+  </file>
+  <file path="src/app/car/car.service.spec.ts">
+    <testCase name="Service: Car should ..." duration="3"/>
   </file>
 </testExecutions>

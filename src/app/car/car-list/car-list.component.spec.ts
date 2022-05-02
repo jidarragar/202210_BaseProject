@@ -12,6 +12,7 @@ describe('CarListComponent', () => {
   let component: CarListComponent;
   let fixture: ComponentFixture<CarListComponent>;
   let debug: DebugElement;
+  let nativeElement: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -39,9 +40,24 @@ describe('CarListComponent', () => {
     }
     fixture.detectChanges();
     debug = fixture.debugElement;
+    nativeElement = debug.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('Se debe tener 3 Registros en component.cars', () => {
+    expect(component.cars.length).toEqual(3);
+  });
+
+  it('Se debe tener encabezado', () => {
+    expect(nativeElement.querySelector('thead')?.childNodes.length).toEqual(1);
+  });
+  it('Se debe tener 3 registros en la tabla', () => {
+    expect(
+      nativeElement.querySelector('tbody')?.querySelectorAll('tr.carClass')
+        .length
+    ).toEqual(3);
   });
 });
